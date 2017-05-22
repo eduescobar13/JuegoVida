@@ -17,9 +17,9 @@ En cada paso, cada célula interactúa con sus ocho células vecinas, es decir, 
 ##### **Ejecución**
 El programa debe invocarse de la siguiente manera:
     
-    java GameOfLife numberOfSteps input.txt output.txt [debug]
+    java JuegoVida numeroDePasos input.txt output.txt [debug]
 
-* **numberOfSteps:** número de pasos que debe evolucionar la configuración inicial.
+* **numeroDePasos:** número de pasos que debe evolucionar la configuración inicial.
 * **input.txt:** fichero de entrada especificando la configuración inicial del universo.
 * **output.txt:** fichero de salida conteniendo la evolución del universo.
 * **debug**: En caso de que se especifique este parámetro (es opcional), el contenido del fichero de salida deberá contener la evolución del universo en cada uno de los pasos partiendo de la configuración inicial. En caso contrario, el fichero de salida sólo contendrá los estados inicial y final del universo, es decir, tras haber ejecutado el número de pasos especificado por numberOfSteps.
