@@ -1,20 +1,25 @@
 # ESIT ULL Grado de Informática
-## DISEÑO Y ANÁLISIS DE ALGORITMOS. Implementación de algoritmos constructivos y búsquedas por entornos para el Max-Mean Dispersion Problem.
+## PROGRAMACIÓN DE APLICACIONES INTERACTIVAS. Implementación en Java del Juego de la Vida.
 #### Realizada por Eduardo Escobar Alberto.
 
-El programa implementado en este repositorio toma como punto de partida el artículo publicado en octubre de 1970 por **Martin Gardner** en la sección Juegos Matemáticos de la revista Scientific American, cuyo título es **The fantastic combinations of John Conway’s new solitaire game “life”**. A trave ́s de dicho art ́ıculo, se dio a conocer al gran pu ́blico el trabajo del matema ́tico brita ́nico John H. Conway.
-El Juego de la Vida (del ingle ́s, Game of Life o simplemente Life) [2, 3] es el mejor ejemplo de un auto ́mata celular, un modelo matema ́tico para un sistema dina ́mico que evoluciona en pasos discretos. Desde un punto de vista teo ́rico, el intere ́s del juego de la vida procede de que es equivalente a una ma ́quina universal de Turing. El resultado de lo anterior es que todo lo que pueda computarse algor ́ıtmicamente, tambie ́n podra ́ computarse en el Juego de la Vida.
-El Juego de la Vida es un “juego” solitario, es decir, la evolucio ́n del mismo depende del estado inicial de su universo, no existiendo ningu ́n otro tipo de interaccio ́n con el mismoma ́squelaespecificacio ́ndeeseestadoinicial(denominadosemilla).Eluniverso consiste en un tablero bidimensional de ce ́lulas o casillas, las cuales pueden tener dos posibles estados: viva (poblada) o muerta (no poblada). En cada paso, cada ce ́lula interactu ́a con sus ocho ce ́lulas vecinas, es decir, aquellas ce ́lulas horizontal, vertical y diagonalmente adyacentes, siguiendo un conjunto de reglas, las cuales se aplican de manera simulta ́nea a todas y cada una de las ce ́lulas del universo. En [4] puede interactuar con un Applet Java que ilustra el funcionamiento del Juego de la Vida.
-##### **Formato de las intancias del problema**
-Las instancias del problema se suministrarán en un fichero de texto con el siguiente formato: 
-* **PRIMERA FILA:** Se encuentra el **número de vértices, n**. 
-* **SIGUIENTES FILAS:** Se enumeran las **afinidades, d(i, j)**, entre los pares de vértices (se asume que las afinidades son simétricas, es decir, que d(i, j) = d( j, i), ∀i, j ∈ V. Además, d(i, i) = 0, ∀i ∈ V).
+##### **Contextualización**
+El programa implementado en este repositorio toma como punto de partida el artículo publicado en octubre de 1970 por **Martin Gardner** en la sección Juegos Matemáticos de la revista Scientific American, cuyo título es **The fantastic combinations of John Conway’s new solitaire game “life”**. A través de dicho artículo, se dio a conocer al gran público el trabajo del matemático británico John H. Conway.
 
-##### **Algoritmos implementados**
-* Constructivo voraz.
-* Destructivo voraz.
-* GRASP.
-* Método Multiarranque.
-* Búsqueda por Entorno Variable.
+El Juego de la Vida (del inglés, Game of Life o simplemente Life) es el mejor ejemplo de un autómata celular, un modelo matemático para un sistema dinámico que evoluciona en pasos discretos. Desde un punto de vista teórico, el interés del juego de la vida procede de que es equivalente a una máquina universal de Turing. El resultado de lo anterior es que todo lo que pueda computarse algorítmicamente, también podrá computarse en el Juego de la Vida.
 
-**Las tablas y gráficas con los resultados se encuentran en el fichero Informe.pdf**
+##### **Explicación**
+El Juego de la Vida es un “juego” solitario, es decir, la evolución del mismo depende del estado inicial de su universo, no existiendo ningún otro tipo de interacción con el mismo más que la especificación de ese estado inicial (denominado semilla). El universo consiste en un **tablero bidimensional de células o casillas**, las cuales pueden tener dos posibles estados: 
+* **VIVA (POBLADA).**
+* **MUERTA (NO POBLADA).** 
+
+En cada paso, cada célula interactúa con sus ocho células vecinas, es decir, aquellas células horizontal, vertical y diagonalmente adyacentes, siguiendo un conjunto de reglas, las cuales se aplican de manera simultánea a todas y cada una de las células del universo.
+
+##### **Ejecución**
+El programa debe invocarse de la siguiente manera:
+    
+    **java GameOfLife numberOfSteps input.txt output.txt [debug]**
+
+* **numberOfSteps:** número de pasos que debe evolucionar la configuración inicial.
+* **input.txt:** fichero de entrada especificando la configuración inicial del universo.
+* **output.txt:** fichero de salida conteniendo la evolución del universo.
+* **debug**: En caso de que se especifique este parámetro (es opcional), el contenido del fichero de salida deberá contener la evolución del universo en cada uno de los pasos partiendo de la configuración inicial. En caso contrario, el fichero de salida sólo contendrá los estados inicial y final del universo, es decir, tras haber ejecutado el número de pasos especificado por numberOfSteps.
